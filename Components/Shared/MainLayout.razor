@@ -1,6 +1,12 @@
 ﻿@inherits LayoutComponentBase
+@inject SwalService SwalService
+@using System.Diagnostics.CodeAnalysis
 
-<BootstrapBlazorRoot>
+<BootstrapBlazorRoot EnableErrorLogger="true" OnErrorHandleAsync="(logger,ex)=> SwalService.Show(new SwalOption()
+    {
+        Category = SwalCategory.Information,
+        Title = ex.Message,
+    })">
     <Layout SideWidth="0" IsPage="true" ShowGotoTop="true" ShowCollapseBar="true"
             IsFullSide="@IsFullSide" IsFixedHeader="@IsFixedHeader" IsFixedFooter="@IsFixedFooter" ShowFooter="@ShowFooter"
             TabDefaultUrl="/"
@@ -124,3 +130,10 @@
     <a href="" class="reload">Reload</a>
     <a class="dismiss">🗙</a>
 </div>
+
+@code
+{
+    [Inject]
+    [NotNull]
+    private SwalService? SwalService2 { get; set; }
+}

@@ -40,7 +40,7 @@ namespace BootstrapBlazor.UiBugTest.Components.Shared
             {
                 new() { Text = "返回组件库", Icon = "fa-solid fa-fw fa-home", Url = "https://www.blazor.zone/components" },
                 new() { Text = "Index", Icon = "fa-solid fa-fw fa-flag", Url = "/" , Match = NavLinkMatch.All},
-                new() { Text = "Counter", Icon = "fa-solid fa-fw fa-check-square", Url = "/counter" },
+                new() { Text = "测试异常捕获", Icon = "fa-solid fa-fw fa-check-square", Url = "/counter" },
                 new() { Text = "Weather", Icon = "fa-solid fa-fw fa-database", Url = "/weather" },
                 new() { Text = "Table", Icon = "fa-solid fa-fw fa-table", Url = "/table" },
                 new() { Text = "花名册", Icon = "fa-solid fa-fw fa-users", Url = "/users" },
